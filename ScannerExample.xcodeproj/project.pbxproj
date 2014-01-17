@@ -21,6 +21,7 @@
 		71A295471888ED8200358997 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71A295291888ED8200358997 /* UIKit.framework */; };
 		71A2954F1888ED8200358997 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 71A2954D1888ED8200358997 /* InfoPlist.strings */; };
 		71A295511888ED8200358997 /* ScannerExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 71A295501888ED8200358997 /* ScannerExampleTests.m */; };
+		71A2955D1888EDD000358997 /* DMScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 71A2955C1888EDD000358997 /* DMScanner.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		71A2954C1888ED8200358997 /* ScannerExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ScannerExampleTests-Info.plist"; sourceTree = "<group>"; };
 		71A2954E1888ED8200358997 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		71A295501888ED8200358997 /* ScannerExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScannerExampleTests.m; sourceTree = "<group>"; };
+		71A2955B1888EDD000358997 /* DMScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMScanner.h; sourceTree = "<group>"; };
+		71A2955C1888EDD000358997 /* DMScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMScanner.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +115,7 @@
 		71A2952B1888ED8200358997 /* ScannerExample */ = {
 			isa = PBXGroup;
 			children = (
+				71A2955A1888EDB000358997 /* ScannerCore */,
 				71A295341888ED8200358997 /* DMAppDelegate.h */,
 				71A295351888ED8200358997 /* DMAppDelegate.m */,
 				71A295371888ED8200358997 /* Main.storyboard */,
@@ -150,6 +154,15 @@
 				71A2954D1888ED8200358997 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		71A2955A1888EDB000358997 /* ScannerCore */ = {
+			isa = PBXGroup;
+			children = (
+				71A2955B1888EDD000358997 /* DMScanner.h */,
+				71A2955C1888EDD000358997 /* DMScanner.m */,
+			);
+			name = ScannerCore;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				71A295321888ED8200358997 /* main.m in Sources */,
+				71A2955D1888EDD000358997 /* DMScanner.m in Sources */,
 				71A2953C1888ED8200358997 /* DMViewController.m in Sources */,
 				71A295361888ED8200358997 /* DMAppDelegate.m in Sources */,
 			);
@@ -461,6 +475,7 @@
 				71A295561888ED8200358997 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		71A295571888ED8200358997 /* Build configuration list for PBXNativeTarget "ScannerExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -469,6 +484,7 @@
 				71A295591888ED8200358997 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

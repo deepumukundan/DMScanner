@@ -7,9 +7,10 @@
 //
 
 #import "DMViewController.h"
+#import "DMScanner.h"
 
-@interface DMViewController ()
-
+@interface DMViewController () <DMScannerDelegate>
+@property (strong,nonatomic) DMScanner *scanner;
 @end
 
 @implementation DMViewController
@@ -18,12 +19,26 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    // Allocate an instance of the scanner
+    self.scanner = [[DMScanner alloc] init];
+    self.scanner.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - DMScanner Delegate 
+- (void)scannerFoundMachineReadableCode:(NSString *)code ofType:(NSString *)type {
+    self.code.text = code;
+    self.type.text = type;
+}
+
+- (IBAction)scan {
+    [self.scanner startScanning];
 }
 
 @end

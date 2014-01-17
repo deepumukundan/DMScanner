@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface DMViewController : UIViewController
-
+@property (weak, nonatomic) IBOutlet UILabel *code;
+@property (weak, nonatomic) IBOutlet UILabel *type;
+- (IBAction)scan;
 @end
